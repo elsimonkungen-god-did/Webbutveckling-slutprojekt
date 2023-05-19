@@ -200,6 +200,7 @@ header {
   background-color: grey;
   padding: 10px;
   border-radius: 8px;
+  overflow-y: auto;
 }
 
 .movie-details h2 {
@@ -207,9 +208,7 @@ header {
 }
 
 .release-date {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+  position: relative;
 }
 
 .scroll-container {
