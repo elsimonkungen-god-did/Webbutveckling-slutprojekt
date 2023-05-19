@@ -4,10 +4,6 @@
   padding: 0;
 }
 
-body {
-  background-color: black;
-}
-
 .ingång-icon {
   width: 250px;
   height: 300px;
@@ -16,6 +12,62 @@ body {
 img {
   max-width: 100%;
   max-height: 100%;
+}
+
+body {
+  background-color: black;
+  color: whitesmoke;
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Luckiest Guy", cursive;
+}
+
+h2 {
+  color: red;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid red;
+  border-radius: 5px;
+  color: red;
+  background-color: black;
+}
+
+.formFooter {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: grey;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+button {
+  background-color: red;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: blue;
 }
 
 .main-ingång {
@@ -28,30 +80,174 @@ h3 {
   color: azure;
 }
 
-h1 {
-  color: red;
-  margin-left: 15px;
-  margin-top: 15px;
-  font-size: 45px;
+nav {
+  display: flex;
+  align-items: center;
+  background-color: grey;
+  padding: 10px;
 }
+
+nav a {
+  margin-right: 100px;
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #c62828;
+}
+
+nav h1 {
+  flex-grow: 1;
+  color: red;
+  margin: 0;
+  font-size: 24px;
+}
+
 a {
   text-decoration: none;
 }
-.filmlista {
-  height: 20vh;
-  background-color: dimgrey;
-}
+
 .listorubrik {
   margin-top: 8vh;
 }
 
+h1 {
+  display: inline;
+}
+
+header {
+  height: 12vh;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: black;
+}
+
 #sökbar {
-  position: fixed;
-  top: 20px;
-  right: 30px;
   border: 1px solid grey;
   border-radius: 5px;
   height: 5vh;
-  width: 20vw;
+  width: 100%;
   outline: 0;
+}
+
+#Sökhus {
+  position: absolute;
+  top: 5px;
+  right: 30px;
+  width: 20vw;
+  overflow-y: visible;
+}
+
+.filmlista {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  height: 40vh;
+  background-color: dimgrey;
+  transition: height 0.3s ease;
+}
+
+.filmlista:hover {
+  height: 45vh;
+}
+
+.filmlista img {
+  margin-right: 20px;
+}
+
+.filmlista img:last-child {
+  margin-right: 0px;
+}
+
+.movie {
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list {
+  width: 100%;
+  color: white;
+  height: 15vh;
+  border-color: "black";
+  background-color: aliceblue;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.bildtext {
+  margin-left: 40px;
+  height: 100%;
+  color: black;
+}
+
+.bildPåFilm {
+  max-height: 100%;
+}
+
+.movie-details {
+  position: fixed;
+  top: 15vh;
+  left: 30vw;
+  right: 30vw;
+  bottom: 5vh;
+  z-index: 9999;
+  background-color: grey;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.movie-details h2 {
+  text-align: center;
+}
+
+.release-date {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.scroll-container {
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    flex-grow: 1;
+    text-align: center;
+    margin: 10px;
+  }
+
+  #Sökhus {
+    position: static;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .main-ingång {
+    flex-direction: column;
+    align-items: center;
+    margin: 10vh auto;
+  }
+
+  .ingång-icon {
+    margin-bottom: 30px;
+  }
+
+  .movie-details {
+    left: 10vw;
+    right: 10vw;
+  }
 }

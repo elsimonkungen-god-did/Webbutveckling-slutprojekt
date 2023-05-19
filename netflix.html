@@ -1,38 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dokument</title>
     <link rel="stylesheet" href="netflix.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Raleway&display=swap"
+    />
   </head>
   <body>
     <header>
-      <a href="ingång.html"><h1>NETFLIX</h1></a>
-      <input id="sökbar" type="text" placeholder="Sök..." />
+      <nav>
+        <a href="ingång.html">NETFLIX</a>
+        <a href="omoss.html">Om Oss</a>
+      </nav>
+      <div id="Sökhus">
+        <input id="sökbar" type="search" placeholder="Sök..." />
+        <div id="resultat"></div>
+      </div>
     </header>
-    <div id="listhus">
+    <main id="listhus">
       <div class="listorubrik">
         <h3>skräck</h3>
-        <div class="filmlista"></div>
+        <div class="filmlista" id="skräck"></div>
       </div>
       <div class="listorubrik">
         <h3>komedi</h3>
-        <div class="filmlista"></div>
+        <div class="filmlista" id="komedi"></div>
       </div>
       <div class="listorubrik">
         <h3>thriller</h3>
-        <div class="filmlista"></div>
+        <div class="filmlista" id="thriller"></div>
       </div>
       <div class="listorubrik">
         <h3>romans</h3>
-        <div class="filmlista"></div>
+        <div class="filmlista" id="romans"></div>
       </div>
       <div class="listorubrik">
         <h3>kritikroserade</h3>
-        <div class="filmlista"></div>
+        <div class="filmlista" id="kritikroserade"></div>
       </div>
-    </div>
+    </main>
   </body>
+  <script src="netflix.js"></script>
 </html>
